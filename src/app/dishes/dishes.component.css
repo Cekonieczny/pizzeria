@@ -1,0 +1,16 @@
+table {
+  font-family: sans-serif;
+  font-size: 20px;
+  border-collapse: collapse;
+}
+td{
+  padding: 10px;
+}
+th{
+  background-color: var(--primaryRed);
+  text-align: center;
+  color: #FFFFFF;
+  border-spacing: 0;
+}
+
+

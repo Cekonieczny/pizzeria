@@ -1,0 +1,170 @@
+{
+  "dishes": [
+    {
+      "id": 1,
+      "name": "Pizza Margherita",
+      "isAvailable": true,
+      "description": "Sos, ser",
+      "type": "pizza",
+      "price": "22"
+    },
+    {
+      "id": 2,
+      "name": "Pizza Funghi",
+      "isAvailable": true,
+      "description": "Sos, ser, pieczarki",
+      "type": "pizza",
+      "price": "23.50"
+    },
+    {
+      "id": 4,
+      "name": "Spaghetti Bolognese",
+      "isAvailable": false,
+      "description": "Sos boloński",
+      "type": "spaghetti",
+      "price": "14"
+    },
+    {
+      "id": 5,
+      "name": "Spaghetti Siciliana",
+      "isAvailable": true,
+      "description": "Sos boloński z szynką i kukurydzą",
+      "type": "spaghetti",
+      "price": "17.50"
+    },
+    {
+      "id": 6,
+      "name": "Cola",
+      "isAvailable": true,
+      "description": "Coca Cola lub Pepsi do wyboru, poj. 0,5l",
+      "type": "beverage",
+      "price": "8"
+    },
+    {
+      "id": 7,
+      "name": "Sok pomarańczowy",
+      "isAvailable": true,
+      "description": "Sok 100%, poj. 0,5l",
+      "type": "beverage",
+      "price": "8"
+    },
+    {
+      "id": 8,
+      "name": "Spaghetti Carbonara",
+      "isAvailable": true,
+      "description": "Sos śmietanowy z jajkiem i boczkiem",
+      "type": "spaghetti",
+      "price": "16"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 2
+        },
+        {
+          "dishId": 5,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 5
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        },
+        {
+          "dishId": 6,
+          "quantity": 1
+        },
+        {
+          "dishId": 7,
+          "quantity": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        },
+        {
+          "dishId": 6,
+          "quantity": 1
+        },
+        {
+          "dishId": 7,
+          "quantity": 1
+        }
+      ],
+      "id": 4
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 2,
+          "quantity": 4
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "password": "admin"
+    }
+  ]
+}

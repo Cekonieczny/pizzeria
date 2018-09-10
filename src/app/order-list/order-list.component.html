@@ -1,0 +1,16 @@
+<table>
+  <thead>
+  <th>Dish</th>
+  <th>Description</th>
+  <th>Price</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let order of orders">
+    <td>{{order.name}}</td>
+    <td>{{order.description}}</td>
+    <td>{{order.price}}</td>
+    <td><button class="button red card-4" (click)="shoppingCartService.addDishToOrder(dish)" >+</button></td>
+  </tr>
+  </tbody>
+</table>
