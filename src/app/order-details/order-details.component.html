@@ -1,0 +1,14 @@
+<div *ngIf="order">
+<table>
+  <thead>
+  <th>Order Details</th>
+  <th></th>
+  <th></th>
+  </thead>
+  <tbody *ngIf="dishes">
+  <tr *ngFor="let dish of dishes">
+    <td>{{dish?.name}}</td>
+    <td>{{dish?.type}}</td>
+    <td>{{dish?.description}}</td>
+</table>
+</div>
