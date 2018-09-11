@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
-import {Dish} from '../Dish';
+import {Dish} from '../models/Dish';
 import {HttpClient} from '@angular/common/http';
-import {DishType} from '../DishType';
+import {DishType} from '../models/DishType';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class DishService {
   }
 
   getDishById(id: number): Observable<Dish> {
-    return this.http.get<Dish>(`api/dishes/${id}`);
+    return this.http.get<Dish>(`/api/projects/${id}`);
   }
 
   constructor(private http: HttpClient) {

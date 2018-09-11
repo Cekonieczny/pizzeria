@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {DishService} from './dish.service';
-import {Dish} from '../Dish';
+import {Dish} from '../models/Dish';
 import {ActivatedRoute} from '@angular/router';
-import {DishType} from '../DishType';
+import {DishType} from '../models/DishType';
 import {ShoppingCartService} from '../shopping-cart/shopping-cart.service';
 
 @Component({

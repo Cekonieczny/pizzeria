@@ -1,16 +1,10 @@
 <table>
   <thead>
-  <th>Dish</th>
-  <th>Description</th>
-  <th>Price</th>
-  <th></th>
+  <th>Nr zamówienia</th>
   </thead>
   <tbody>
-  <tr *ngFor="let order of orders">
-    <td>{{order.name}}</td>
-    <td>{{order.description}}</td>
-    <td>{{order.price}}</td>
-    <td><button class="button red card-4" (click)="shoppingCartService.addDishToOrder(dish)" >+</button></td>
-  </tr>
+  <div *ngFor="let order of orders">
+      <td class="button fixedWidth red card-4" [routerLink]="['/order-details', order.id]">{{order.id}}</td>
+  </div>
   </tbody>
 </table>

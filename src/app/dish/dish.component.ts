@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DishService} from '../dishes/dish.service';
-import {Dish} from '../Dish';
+import {Dish} from '../models/Dish';
 import {ActivatedRoute} from '@angular/router';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs';
@@ -10,7 +10,7 @@ import {Subject} from 'rxjs';
   templateUrl: './dish.component.html',
   styleUrls: ['./dish.component.css']
 })
-export class DishComponent implements OnInit {
+export class DishComponent implements OnInit, OnDestroy {
   private readonly destroy$ = new Subject();
   dish: Dish;
 
@@ -19,6 +19,10 @@ export class DishComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getDishById();
+  }
+
+  getDishById() {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
     this.dishService.getDishById(+id)
       .pipe(takeUntil(this.destroy$))

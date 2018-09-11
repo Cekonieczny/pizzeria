@@ -1,17 +1,18 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {OrderService} from './order.service';
-import {DishService} from '../dishes/dish.service';
+import {Order} from '../models/Order';
 
 @Component({
   selector: 'app-order-list',
   templateUrl: './order-list.component.html',
+
   styleUrls: ['./order-list.component.css']
 })
 export class OrderListComponent implements OnInit {
   orders = [];
+  @Input() order: Order;
 
-  constructor(private orderService: OrderService,
-              private dishService: DishService) {
+  constructor(private orderService: OrderService) {
   }
 
   ngOnInit() {

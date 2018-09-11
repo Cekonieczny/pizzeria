@@ -1,9 +1,9 @@
 export interface Order {
-  id?: number;
+  id: number;
   dishIdsWithQuantities: DishIdWithQuantity[];
 }
 
-interface DishIdWithQuantity {
+export interface DishIdWithQuantity {
   dishId: number;
   quantity: number;
 }

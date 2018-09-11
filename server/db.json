@@ -158,6 +158,346 @@
         }
       ],
       "id": 5
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 4
+        }
+      ],
+      "id": 6
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 3
+        }
+      ],
+      "id": 7
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 2,
+          "quantity": 2
+        },
+        {
+          "dishId": 6,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        }
+      ],
+      "id": 8
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 4,
+          "quantity": 2
+        },
+        {
+          "dishId": 7,
+          "quantity": 2
+        },
+        {
+          "dishId": 6,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        }
+      ],
+      "id": 9
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 6,
+          "quantity": 2
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        }
+      ],
+      "id": 10
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 7,
+          "quantity": 1
+        },
+        {
+          "dishId": 6,
+          "quantity": 2
+        },
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        }
+      ],
+      "id": 11
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 8,
+          "quantity": 2
+        },
+        {
+          "dishId": 7,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        },
+        {
+          "dishId": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 12
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 7,
+          "quantity": 1
+        },
+        {
+          "dishId": 6,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 2
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        }
+      ],
+      "id": 13
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 4,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 2
+        },
+        {
+          "dishId": 6,
+          "quantity": 1
+        }
+      ],
+      "id": 14
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 6,
+          "quantity": 2
+        },
+        {
+          "dishId": 2,
+          "quantity": 2
+        },
+        {
+          "dishId": 4,
+          "quantity": 2
+        },
+        {
+          "dishId": 7,
+          "quantity": 1
+        }
+      ],
+      "id": 15
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 5,
+          "quantity": 2
+        },
+        {
+          "dishId": 4,
+          "quantity": 2
+        },
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 8,
+          "quantity": 2
+        }
+      ],
+      "id": 16
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 7,
+          "quantity": 2
+        },
+        {
+          "dishId": 6,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 2
+        }
+      ],
+      "id": 17
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        }
+      ],
+      "id": 18
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        },
+        {
+          "dishId": 8,
+          "quantity": 1
+        },
+        {
+          "dishId": 6,
+          "quantity": 1
+        },
+        {
+          "dishId": 7,
+          "quantity": 1
+        }
+      ],
+      "id": 19
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 2
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        }
+      ],
+      "id": 20
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 6
+        }
+      ],
+      "id": 21
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 4,
+          "quantity": 6
+        }
+      ],
+      "id": 22
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 8
+        }
+      ],
+      "id": 23
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 5,
+          "quantity": 6
+        }
+      ],
+      "id": 24
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 5
+        }
+      ],
+      "id": 25
     }
   ],
   "users": [

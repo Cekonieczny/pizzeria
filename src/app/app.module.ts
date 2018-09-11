@@ -8,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { SummaryComponent } from './summary/summary.component';
 import { OrderListComponent } from './order-list/order-list.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { OrderListComponent } from './order-list/order-list.component';
     ShoppingCartComponent,
     SummaryComponent,
     OrderListComponent,
+    OrderDetailsComponent,
   ],
   imports: [
     HttpClientModule,

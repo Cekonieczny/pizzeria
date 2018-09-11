@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {DishToOrder} from '../DishToOrder';
-import {Order} from '../Order';
+import {DishToOrder} from '../models/DishToOrder';
+import {DishIdWithQuantity, Order} from '../models/Order';
 import {Observable} from 'rxjs';
-import {Dish} from '../Dish';
+import {Dish} from '../models/Dish';
 
 
 @Injectable({
@@ -67,7 +67,8 @@ export class ShoppingCartService {
       dishIdsWithQuantities: []
     };
     for (const dishToOrder of this.dishesToOrder) {
-      order.dishIdsWithQuantities.push({dishId: dishToOrder.id, quantity: dishToOrder.numberOfOrders});
+      const dishIdWithQuantity: DishIdWithQuantity = {dishId: dishToOrder.id, quantity: dishToOrder.numberOfOrders};
+      order.dishIdsWithQuantities.push(dishIdWithQuantity);
     }
     return order;
   }

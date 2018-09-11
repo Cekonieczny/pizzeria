@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {DishType} from './DishType';
+import {DishType} from './models/DishType';
 
 @Component({
   selector: 'app-root',
