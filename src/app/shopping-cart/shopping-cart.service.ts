@@ -4,6 +4,7 @@ import {DishToOrder} from '../models/DishToOrder';
 import {DishIdWithQuantity, Order} from '../models/Order';
 import {Observable} from 'rxjs';
 import {Dish} from '../models/Dish';
+import {PersonalData} from '../models/PersonalData';
 
 
 @Injectable({
@@ -55,10 +56,12 @@ export class ShoppingCartService {
     }
   }
 
-  submitOrder(): Observable<Order> {
-    const order: Observable<Order> = this.http.post<Order>('api/orders', this.convertToOrder());
+  submitOrder(personalData: PersonalData): Observable<Order> {
+    const order: Order = this.convertToOrder();
+    order.personalData = personalData;
+    const order$: Observable<Order> = this.http.post<Order>('api/orders', order);
     this.dishesToOrder = [];
-    return order;
+    return order$;
   }
 
   private convertToOrder(): Order {

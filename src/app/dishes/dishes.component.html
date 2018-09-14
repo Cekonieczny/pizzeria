@@ -1,16 +1,28 @@
-<table>
-  <thead>
-  <th>Dish</th>
-  <th>Description</th>
-  <th>Price</th>
-  <th></th>
-  </thead>
-  <tbody>
-  <tr *ngFor="let dish of dishes">
-    <td>{{dish.name}}</td>
-    <td>{{dish.description}}</td>
-    <td>{{dish.price}}</td>
-    <td><button class="button red card-4" (click)="shoppingCartService.addDishToOrder(dish)" >+</button></td>
-  </tr>
-  </tbody>
-</table>
+<div class="main" *ngIf="dishes">
+  <app-shopping-cart *ngIf="!userService.authenticatedUser"></app-shopping-cart>
+  <table class="col2">
+    <caption>Menu</caption>
+    <tbody>
+    <tr>
+      <th>Dish</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Availability</th>
+      <th colspan="2"></th>
+    </tr>
+    <tr *ngFor="let dish of dishes">
+      <td>{{dish.name}}</td>
+      <td>{{dish.description}}</td>
+      <td>{{dish.price}} zł</td>
+      <td *ngIf=" dish.isAvailable && !userService.authenticatedUser" style="color: green">Available</td>
+      <td *ngIf="!dish.isAvailable && !userService.authenticatedUser" style="color: gray">Not available</td>
+      <td><input type="checkbox" *ngIf="userService.authenticatedUser" [checked]="dish.isAvailable"
+                 (click)="updateAvailability(dish)"></td>
+      <td>
+        <button *ngIf=" dish.isAvailable && !userService.authenticatedUser" class="button red card-4"
+                (click)="shoppingCartService.addDishToOrder(dish)">+
+        </button>
+      </td>
+    </tbody>
+  </table>
+</div>

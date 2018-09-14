@@ -23,10 +23,12 @@ export class DishComponent implements OnInit, OnDestroy {
   }
 
   getDishById() {
-    const id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.dishService.getDishById(+id)
-      .pipe(takeUntil(this.destroy$))
-      .subscribe(dish => this.dish = dish);
+    this.activatedRoute.paramMap.subscribe(params => {
+      const id = params.get('id');
+      this.dishService.getDishById(+id)
+        .pipe(takeUntil(this.destroy$))
+        .subscribe(dish => this.dish = dish);
+    });
   }
 
   ngOnDestroy(): void {

@@ -19,10 +19,11 @@
     {
       "id": 4,
       "name": "Spaghetti Bolognese",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos boloński",
       "type": "spaghetti",
-      "price": "14"
+      "price": "14",
+      "numberOfOrders": 1
     },
     {
       "id": 5,
@@ -30,12 +31,13 @@
       "isAvailable": true,
       "description": "Sos boloński z szynką i kukurydzą",
       "type": "spaghetti",
-      "price": "17.50"
+      "price": "17.50",
+      "numberOfOrders": 1
     },
     {
       "id": 6,
       "name": "Cola",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Coca Cola lub Pepsi do wyboru, poj. 0,5l",
       "type": "beverage",
       "price": "8"
@@ -59,44 +61,29 @@
   ],
   "orders": [
     {
-      "id": 1,
       "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 2
-        },
-        {
-          "dishId": 5,
-          "quantity": 3
-        }
-      ]
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
         {
           "dishId": 2,
-          "quantity": 1
-        },
-        {
-          "dishId": 4,
-          "quantity": 1
-        },
-        {
-          "dishId": 5,
-          "quantity": 1
+          "quantity": 6
         }
       ],
-      "id": 2
+      "personalData": {
+        "firstName": "aweqwe",
+        "lastName": "qweqweq",
+        "phoneNumber": "weqweqwe",
+        "address": {
+          "street": "tewqtewt",
+          "city": "ewrwerewt",
+          "zipCode": "qr"
+        }
+      },
+      "id": 1
     },
     {
       "dishIdsWithQuantities": [
         {
           "dishId": 1,
-          "quantity": 5
+          "quantity": 1
         },
         {
           "dishId": 2,
@@ -117,8 +104,65 @@
         {
           "dishId": 7,
           "quantity": 1
+        },
+        {
+          "dishId": 8,
+          "quantity": 1
         }
       ],
+      "personalData": {
+        "firstName": "",
+        "lastName": "",
+        "phoneNumber": "",
+        "address": {
+          "street": "",
+          "city": "",
+          "zipCode": ""
+        }
+      },
+      "id": 2
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        },
+        {
+          "dishId": 6,
+          "quantity": 1
+        },
+        {
+          "dishId": 7,
+          "quantity": 1
+        },
+        {
+          "dishId": 8,
+          "quantity": 1
+        }
+      ],
+      "personalData": {
+        "firstName": "qwewqt",
+        "lastName": "tretreter",
+        "phoneNumber": "tretert",
+        "address": {
+          "street": "ytrytryrty",
+          "city": "tryrtyrt",
+          "zipCode": "erteryt"
+        }
+      },
       "id": 3
     },
     {
@@ -146,70 +190,105 @@
         {
           "dishId": 7,
           "quantity": 1
+        },
+        {
+          "dishId": 8,
+          "quantity": 1
         }
       ],
+      "personalData": {
+        "firstName": "ahahashdh",
+        "lastName": "hasdajewrwj",
+        "phoneNumber": "jasdjqjqej",
+        "address": {
+          "street": "jsdjfdsjdsfj",
+          "city": "sdjfdsjfdsjfds",
+          "zipCode": "fjfjffjfjfdsjdf"
+        }
+      },
       "id": 4
     },
     {
       "dishIdsWithQuantities": [
         {
+          "dishId": 1,
+          "quantity": 2
+        },
+        {
           "dishId": 2,
-          "quantity": 4
+          "quantity": 2
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
         }
       ],
+      "personalData": {
+        "firstName": "",
+        "lastName": "",
+        "phoneNumber": "",
+        "address": {
+          "street": "",
+          "city": "",
+          "zipCode": ""
+        }
+      },
       "id": 5
     },
     {
       "dishIdsWithQuantities": [
         {
           "dishId": 1,
-          "quantity": 4
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 2
         }
       ],
+      "personalData": {
+        "firstName": "asdasd",
+        "lastName": "qweqwet",
+        "phoneNumber": "yyy",
+        "address": {
+          "street": "ertret",
+          "city": "utyutyu",
+          "zipCode": "ytutyuty"
+        }
+      },
       "id": 6
     },
     {
       "dishIdsWithQuantities": [
         {
-          "dishId": 2,
+          "dishId": 1,
           "quantity": 1
-        },
-        {
-          "dishId": 4,
-          "quantity": 3
         }
       ],
+      "personalData": {
+        "firstName": "asda",
+        "lastName": "qweqw",
+        "phoneNumber": "qeqwe",
+        "address": {
+          "street": "retert",
+          "city": "qwerwr",
+          "zipCode": "qweqew"
+        }
+      },
       "id": 7
     },
     {
       "dishIdsWithQuantities": [
         {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
           "dishId": 2,
-          "quantity": 2
-        },
-        {
-          "dishId": 6,
           "quantity": 1
         },
         {
           "dishId": 4,
-          "quantity": 1
-        }
-      ],
-      "id": 8
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 4,
-          "quantity": 2
-        },
-        {
-          "dishId": 7,
-          "quantity": 2
-        },
-        {
-          "dishId": 6,
           "quantity": 1
         },
         {
@@ -217,40 +296,62 @@
           "quantity": 1
         }
       ],
+      "personalData": {
+        "firstName": "ddasd",
+        "lastName": "asdasdsa",
+        "phoneNumber": "asdsad",
+        "address": {
+          "street": "qwdwq",
+          "city": "asdsad",
+          "zipCode": "asdasda"
+        }
+      },
+      "id": 8
+    },
+    {
+      "dishIdsWithQuantities": [],
+      "personalData": {
+        "firstName": "fdfdfd",
+        "lastName": "fdfdfd",
+        "phoneNumber": "fdfdfd",
+        "address": {
+          "street": "fdfd",
+          "city": "fdfd",
+          "zipCode": "fdfdfd"
+        }
+      },
       "id": 9
     },
     {
       "dishIdsWithQuantities": [
         {
-          "dishId": 6,
+          "dishId": 4,
           "quantity": 2
         },
         {
           "dishId": 5,
-          "quantity": 1
+          "quantity": 2
         },
         {
-          "dishId": 4,
-          "quantity": 1
+          "dishId": 8,
+          "quantity": 3
         }
       ],
+      "personalData": {
+        "firstName": "dfgg",
+        "lastName": "dfgerter",
+        "phoneNumber": "ertter",
+        "address": {
+          "street": "dfgdfgdfg",
+          "city": "dfgdfgdfg",
+          "zipCode": "dfdg"
+        }
+      },
       "id": 10
     },
     {
       "dishIdsWithQuantities": [
         {
-          "dishId": 7,
-          "quantity": 1
-        },
-        {
-          "dishId": 6,
-          "quantity": 2
-        },
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
-        {
           "dishId": 2,
           "quantity": 1
         },
@@ -259,16 +360,26 @@
           "quantity": 1
         }
       ],
+      "personalData": {
+        "firstName": "wqeqwt",
+        "lastName": "retrtt",
+        "phoneNumber": "tretret",
+        "address": {
+          "street": "truurre",
+          "city": "rtytryytutr",
+          "zipCode": "rtytryrty"
+        }
+      },
       "id": 11
     },
     {
       "dishIdsWithQuantities": [
         {
-          "dishId": 8,
-          "quantity": 2
+          "dishId": 1,
+          "quantity": 1
         },
         {
-          "dishId": 7,
+          "dishId": 2,
           "quantity": 1
         },
         {
@@ -276,16 +387,7 @@
           "quantity": 1
         },
         {
-          "dishId": 1,
-          "quantity": 1
-        }
-      ],
-      "id": 12
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 7,
+          "dishId": 5,
           "quantity": 1
         },
         {
@@ -293,211 +395,410 @@
           "quantity": 1
         },
         {
-          "dishId": 5,
-          "quantity": 2
-        },
-        {
-          "dishId": 4,
+          "dishId": 7,
           "quantity": 1
         },
         {
-          "dishId": 2,
+          "dishId": 8,
           "quantity": 1
         }
       ],
+      "personalData": {
+        "firstName": "ssd",
+        "lastName": "dfsd",
+        "phoneNumber": "fsdf",
+        "address": {
+          "street": "ds",
+          "city": "ssss",
+          "zipCode": "sdfdsf"
+        }
+      },
+      "id": 12
+    },
+    {
+      "dishIdsWithQuantities": [],
+      "personalData": {
+        "firstName": "wqewqe",
+        "lastName": "ewqeqwe",
+        "phoneNumber": "wqeqweqw",
+        "address": {
+          "street": "wqeqwe",
+          "city": "qwewqewqe",
+          "zipCode": "eqweqwe"
+        }
+      },
       "id": 13
     },
     {
       "dishIdsWithQuantities": [
         {
+          "dishId": 1,
+          "quantity": 2
+        },
+        {
+          "dishId": 2,
+          "quantity": 3
+        },
+        {
           "dishId": 4,
           "quantity": 1
         },
         {
-          "dishId": 2,
+          "dishId": 5,
           "quantity": 1
         },
         {
-          "dishId": 5,
-          "quantity": 2
-        },
-        {
-          "dishId": 6,
+          "dishId": 8,
           "quantity": 1
         }
       ],
+      "personalData": {
+        "firstName": "fsdfsdf",
+        "lastName": "sdfsdfds",
+        "phoneNumber": "fsdfsdfs",
+        "address": {
+          "street": "fsdfsdfsdf",
+          "city": "sdfsdfsdfds",
+          "zipCode": "dfsdfsdf"
+        }
+      },
       "id": 14
     },
     {
       "dishIdsWithQuantities": [
         {
-          "dishId": 6,
-          "quantity": 2
-        },
-        {
-          "dishId": 2,
-          "quantity": 2
+          "dishId": 1,
+          "quantity": 1
         },
         {
           "dishId": 4,
-          "quantity": 2
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        },
+        {
+          "dishId": 6,
+          "quantity": 1
         },
         {
           "dishId": 7,
           "quantity": 1
+        },
+        {
+          "dishId": 8,
+          "quantity": 1
         }
       ],
+      "personalData": {
+        "firstName": "asd",
+        "lastName": "asdasd",
+        "phoneNumber": "asdas",
+        "address": {
+          "street": "sadas",
+          "city": "sadasd",
+          "zipCode": "sadasd"
+        }
+      },
       "id": 15
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 5,
-          "quantity": 2
-        },
-        {
-          "dishId": 4,
-          "quantity": 2
-        },
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
-        {
-          "dishId": 8,
-          "quantity": 2
-        }
-      ],
-      "id": 16
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 7,
-          "quantity": 2
-        },
-        {
-          "dishId": 6,
-          "quantity": 1
-        },
-        {
-          "dishId": 2,
-          "quantity": 2
-        }
-      ],
-      "id": 17
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
-        {
-          "dishId": 2,
-          "quantity": 1
-        }
-      ],
-      "id": 18
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
-        {
-          "dishId": 2,
-          "quantity": 1
-        },
-        {
-          "dishId": 4,
-          "quantity": 1
-        },
-        {
-          "dishId": 5,
-          "quantity": 1
-        },
-        {
-          "dishId": 8,
-          "quantity": 1
-        },
-        {
-          "dishId": 6,
-          "quantity": 1
-        },
-        {
-          "dishId": 7,
-          "quantity": 1
-        }
-      ],
-      "id": 19
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
-        {
-          "dishId": 2,
-          "quantity": 2
-        },
-        {
-          "dishId": 5,
-          "quantity": 1
-        },
-        {
-          "dishId": 4,
-          "quantity": 1
-        }
-      ],
-      "id": 20
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 6
-        }
-      ],
-      "id": 21
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 4,
-          "quantity": 6
-        }
-      ],
-      "id": 22
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 8
-        }
-      ],
-      "id": 23
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 5,
-          "quantity": 6
-        }
-      ],
-      "id": 24
     },
     {
       "dishIdsWithQuantities": [
         {
           "dishId": 1,
           "quantity": 5
+        },
+        {
+          "dishId": 2,
+          "quantity": 7
         }
       ],
+      "personalData": {
+        "firstName": "qwewqeqw",
+        "lastName": "ewqewqe",
+        "phoneNumber": "qwewqewqe",
+        "address": {
+          "street": "ewqewqewqe",
+          "city": "qwewqeqwewqe",
+          "zipCode": "wqeqweqweqw"
+        }
+      },
+      "id": 16
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 5,
+          "quantity": 1
+        }
+      ],
+      "personalData": {
+        "firstName": "qweqweqweqwe",
+        "lastName": "qweqwe",
+        "phoneNumber": "qweqweqe",
+        "address": {
+          "street": "wqeqwe",
+          "city": "wqeqwewq",
+          "zipCode": "eqweqweqwe"
+        }
+      },
+      "id": 17
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 5,
+          "quantity": 1
+        },
+        {
+          "dishId": 7,
+          "quantity": 1
+        },
+        {
+          "dishId": 8,
+          "quantity": 1
+        }
+      ],
+      "personalData": {
+        "firstName": "asdasdsa",
+        "lastName": "dsadsadsa",
+        "phoneNumber": "dsadsadsa",
+        "address": {
+          "street": "adsadsad",
+          "city": "sadsadasd",
+          "zipCode": "dsadsad"
+        }
+      },
+      "id": 18
+    },
+    {
+      "dishIdsWithQuantities": [],
+      "personalData": {
+        "firstName": "asdasdsa",
+        "lastName": "dsadsadsa",
+        "phoneNumber": "dsadsadsa",
+        "address": {
+          "street": "adsadsad",
+          "city": "sadsadasd",
+          "zipCode": "dsadsad"
+        }
+      },
+      "id": 19
+    },
+    {
+      "dishIdsWithQuantities": [],
+      "personalData": {
+        "firstName": "asdasdsa",
+        "lastName": "dsadsadsa",
+        "phoneNumber": "dsadsadsa",
+        "address": {
+          "street": "adsadsad",
+          "city": "sadsadasd",
+          "zipCode": "dsadsad"
+        }
+      },
+      "id": 20
+    },
+    {
+      "dishIdsWithQuantities": [],
+      "personalData": {
+        "firstName": "asdasdsa",
+        "lastName": "dsadsadsa",
+        "phoneNumber": "dsadsadsa",
+        "address": {
+          "street": "adsadsad",
+          "city": "sadsadasd",
+          "zipCode": "dsadsad"
+        }
+      },
+      "id": 21
+    },
+    {
+      "dishIdsWithQuantities": [],
+      "personalData": {
+        "firstName": "asdasdsa",
+        "lastName": "dsadsadsa",
+        "phoneNumber": "dsadsadsa",
+        "address": {
+          "street": "adsadsad",
+          "city": "sadsadasd",
+          "zipCode": "dsadsad"
+        }
+      },
+      "id": 22
+    },
+    {
+      "dishIdsWithQuantities": [],
+      "personalData": {
+        "firstName": "asdasdsa",
+        "lastName": "dsadsadsa",
+        "phoneNumber": "dsadsadsa",
+        "address": {
+          "street": "adsadsad",
+          "city": "sadsadasd",
+          "zipCode": "dsadsad"
+        }
+      },
+      "id": 23
+    },
+    {
+      "dishIdsWithQuantities": [],
+      "personalData": {
+        "firstName": "asdasdsa",
+        "lastName": "dsadsadsa",
+        "phoneNumber": "dsadsadsa",
+        "address": {
+          "street": "adsadsad",
+          "city": "sadsadasd",
+          "zipCode": "dsadsad"
+        }
+      },
+      "id": 24
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        },
+        {
+          "dishId": 7,
+          "quantity": 1
+        },
+        {
+          "dishId": 8,
+          "quantity": 1
+        }
+      ],
+      "personalData": {
+        "firstName": "xvcvxcvxv",
+        "lastName": "xcvxcvxcv",
+        "phoneNumber": "xcvxvcxc",
+        "address": {
+          "street": "cvxcvxcvx",
+          "city": "cvxcvxcvxcvxcvx",
+          "zipCode": "xvxcvxcvxcvx"
+        }
+      },
       "id": 25
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        },
+        {
+          "dishId": 7,
+          "quantity": 1
+        },
+        {
+          "dishId": 8,
+          "quantity": 1
+        }
+      ],
+      "personalData": {
+        "firstName": "adam",
+        "lastName": "adamski",
+        "phoneNumber": "123213213",
+        "address": {
+          "street": "adamska",
+          "city": "adamowo",
+          "zipCode": "62-033"
+        }
+      },
+      "id": 26
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        }
+      ],
+      "personalData": {
+        "firstName": "qwewqe",
+        "lastName": "qweqwe",
+        "phoneNumber": "wq",
+        "address": {
+          "street": "qweqwe",
+          "city": "qwewqe",
+          "zipCode": "qweqwe"
+        }
+      },
+      "id": 27
+    },
+    {
+      "dishIdsWithQuantities": [
+        {
+          "dishId": 1,
+          "quantity": 1
+        },
+        {
+          "dishId": 2,
+          "quantity": 1
+        },
+        {
+          "dishId": 4,
+          "quantity": 1
+        },
+        {
+          "dishId": 5,
+          "quantity": 1
+        },
+        {
+          "dishId": 7,
+          "quantity": 1
+        }
+      ],
+      "personalData": {
+        "firstName": "sadasdsa",
+        "lastName": "asdsad",
+        "phoneNumber": "as",
+        "address": {
+          "street": "dsadsad",
+          "city": "asdsad",
+          "zipCode": "asdasd"
+        }
+      },
+      "id": 28
     }
   ],
   "users": [

@@ -1,9 +1,14 @@
 <div class="wrapper">
-  <header class="header">Header</header>
+  <header class="header">
+    <app-login></app-login>
+  </header>
   <table class="navBar">
     <tr>
       <td>
         <a routerLink="dishes/all" routerLinkActive="selected">Home</a>
+      </td>
+      <td>
+        <a *ngIf="userService.authenticatedUser" routerLink="order-list" routerLinkActive="selected">Order List</a>
       </td>
       <td>
         <a routerLink="dishes/pizza" routerLinkActive="selected">Pizza</a>
@@ -17,16 +22,8 @@
     </tr>
   </table>
   <article class="main">
-    <aside class="aside aside-1">
-      <app-shopping-cart></app-shopping-cart>
-    </aside>
-    <p>
-      <router-outlet></router-outlet>
-    </p>
-
+    <router-outlet></router-outlet>
   </article>
-
-  <footer class="footer">Footer</footer>
 </div>
 
 

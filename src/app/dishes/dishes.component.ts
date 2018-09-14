@@ -4,6 +4,7 @@ import {Dish} from '../models/Dish';
 import {ActivatedRoute} from '@angular/router';
 import {DishType} from '../models/DishType';
 import {ShoppingCartService} from '../shopping-cart/shopping-cart.service';
+import {UserService} from '../user.service';
 
 @Component({
   selector: 'app-dishes',
@@ -16,7 +17,8 @@ export class DishesComponent implements OnInit {
 
   constructor(private dishService: DishService,
               private activatedRoute: ActivatedRoute,
-              public shoppingCartService: ShoppingCartService) {
+              public shoppingCartService: ShoppingCartService,
+              public userService: UserService) {
   }
 
   ngOnInit() {
@@ -29,6 +31,7 @@ export class DishesComponent implements OnInit {
       }
     });
   }
+
   getDishes(): void {
     this.dishService.getDishes()
       .subscribe(dishes => this.dishes = dishes);
@@ -37,5 +40,10 @@ export class DishesComponent implements OnInit {
   getDishesByType(dishType: DishType): void {
     this.dishService.getDishesByType(dishType)
       .subscribe(dishes => this.dishes = dishes);
+  }
+
+  updateAvailability(dish: Dish) {
+    dish.isAvailable = !dish.isAvailable;
+    this.dishService.updateAvailability(dish).subscribe();
   }
 }

@@ -1,14 +1,58 @@
-<div *ngIf="order">
-<table>
-  <thead>
-  <th>Order Details</th>
-  <th></th>
-  <th></th>
-  </thead>
-  <tbody *ngIf="dishes">
-  <tr *ngFor="let dish of dishes">
-    <td>{{dish?.name}}</td>
-    <td>{{dish?.type}}</td>
-    <td>{{dish?.description}}</td>
+<table *ngIf="order" class="main">
+  <caption *ngIf="!userService.authenticatedUser">Your Order</caption>
+  <div class="col1">
+    <app-order-list *ngIf="userService.authenticatedUser"></app-order-list>
+  </div>
+  <div class="col2 noBottomBorder">
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+      </tr>
+      <tbody>
+      <tr>
+        <td>{{order.personalData.firstName}}</td>
+        <td>{{order.personalData.lastName}}</td>
+        <td>{{order.personalData.phoneNumber}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <table>
+      <tr>
+        <th>City</th>
+        <th>Street name</th>
+        <th>Zip code</th>
+      </tr>
+      <tbody>
+      <tr>
+        <td>{{order.personalData.address.city}}</td>
+        <td>{{order.personalData.address.street}}</td>
+        <td>{{order.personalData.address.zipCode}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col3 noBottomBorder">
+    <table>
+      <tr>
+        <th>Dish Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+      </tr>
+      <tbody *ngIf="dishesWithQuantities">
+      <tr *ngFor="let dishWithQuantity of dishesWithQuantities">
+        <td>{{dishWithQuantity?.dish.name}}</td>
+        <td>{{dishWithQuantity?.dish.description}}</td>
+        <td>{{dishWithQuantity?.quantity}}</td>
+      </tr>
+      <tr>
+        <button *ngIf="!userService.authenticatedUser" routerLink="" class="button red card-4">Back</button>
+      </tr>
+      </tbody>
+
+    </table>
+  </div>
 </table>
-</div>
+
+

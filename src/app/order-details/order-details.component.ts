@@ -3,9 +3,10 @@ import {ActivatedRoute} from '@angular/router';
 import {Order} from '../models/Order';
 import {OrderService} from '../order-list/order.service';
 import {DishService} from '../dishes/dish.service';
-import {Dish} from '../models/Dish';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
+import {DishWithQuantity} from '../models/DishWithQuantity';
+import {UserService} from '../user.service';
 
 @Component({
   selector: 'app-order-details',
@@ -14,37 +15,40 @@ import {takeUntil} from 'rxjs/operators';
 })
 export class OrderDetailsComponent implements OnInit, OnDestroy {
   order: Order;
-  dishes: Dish[];
-  dish: Dish;
+  dishesWithQuantities: DishWithQuantity[] = [];
   private readonly destroy$ = new Subject();
 
   constructor(private orderService: OrderService,
               private activatedRoute: ActivatedRoute,
-              private dishService: DishService) {
+              private dishService: DishService,
+              public userService: UserService) {
   }
 
   ngOnInit() {
-    const id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.orderService.getOrderById(+id).pipe(takeUntil(this.destroy$))
-      .subscribe(item => this.order = item);
-    this.getDishes();
+    this.activatedRoute.paramMap.subscribe(params => {
+      this.dishesWithQuantities = [];
+      const id = params.get('id');
+      this.orderService.getOrderById(+id).pipe(takeUntil(this.destroy$))
+        .subscribe(item => {
+          this.order = item;
+          this.getDishes();
+        });
+    });
   }
 
   getDishes() {
     for (const dishIdWithQuantity of this.order.dishIdsWithQuantities) {
-      this.getDishById(dishIdWithQuantity.dishId);
-      this.dishes.push(this.dish);
+      const dishWithQuantity: DishWithQuantity = {dish: undefined, quantity: dishIdWithQuantity.quantity};
+      this.dishService.getDishById(dishIdWithQuantity.dishId).pipe(takeUntil(this.destroy$))
+        .subscribe(item => {
+          dishWithQuantity.dish = item;
+          this.dishesWithQuantities.push(dishWithQuantity);
+        });
     }
-  }
-
-  private getDishById(id: number): void {
-    this.dishService.getDishById(+id).pipe(takeUntil(this.destroy$))
-      .subscribe(item => this.dish = item);
   }
 
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
   }
-
 }

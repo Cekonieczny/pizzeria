@@ -12,8 +12,6 @@ export class ShoppingCartComponent implements OnInit {
   constructor(private shoppingCartService: ShoppingCartService,
               public router: Router) {
   }
-
-
   getDishesToOrder(): DishToOrder[] {
     return this.shoppingCartService.getDishesToOrder();
   }
@@ -28,10 +26,6 @@ export class ShoppingCartComponent implements OnInit {
 
   decrementQuantity(dishToOrder: DishToOrder) {
     this.shoppingCartService.decrementQuantity(dishToOrder);
-  }
-
-  submitOrder() {
-    this.shoppingCartService.submitOrder().subscribe();
   }
 
   ngOnInit() {

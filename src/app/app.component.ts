@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {DishType} from './models/DishType';
+import {Component} from '@angular/core';
+import {UserService} from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,6 @@ import {DishType} from './models/DishType';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  dishType: DishType;
-  title = 'pizzeria';
+  constructor(public userService: UserService) {
+  }
 }

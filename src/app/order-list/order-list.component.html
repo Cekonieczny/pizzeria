@@ -1,10 +1,10 @@
-<table>
-  <thead>
-  <th>Nr zamówienia</th>
-  </thead>
-  <tbody>
-  <div *ngFor="let order of orders">
-      <td class="button fixedWidth red card-4" [routerLink]="['/order-details', order.id]">{{order.id}}</td>
-  </div>
-  </tbody>
+<table class="col1">
+    <thead>
+    <th>Order number</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let order of orders">
+      <td class="button fixedWidth red card-4" [routerLink]="['/order-details', order.id]" routerLinkActive="selected">{{order.id}}</td>
+    </tr>
+    </tbody>
 </table>

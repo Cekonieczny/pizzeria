@@ -1,0 +1,23 @@
+<div [formGroup]="loginForm">
+  <div class="header column">
+    <button tabindex="-1" class="button red card-4" *ngIf="!userService.authenticatedUser" (click)="onSubmit()">Login
+    </button>
+    <button tabindex="-1" class="button red card-4" *ngIf="userService.authenticatedUser" (click)="logout()"
+            routerLink="">Logout
+    </button>
+  </div>
+  <div class="header column">
+    <input tabindex="2" *ngIf="!userService.authenticatedUser" type="text" formControlName="password">
+  </div>
+  <div class="header column" *ngIf="!userService.authenticatedUser">
+    Password:
+  </div>
+  <div class="header column">
+    <input tabindex="1" type="text" formControlName="name" *ngIf="!userService.authenticatedUser">
+    <div *ngIf="userService.authenticatedUser">{{userService.authenticatedUser.name}}</div>
+  </div>
+  <div class="header column">
+    User name:
+  </div>
+  <div class="header column" id="errorMessage">{{errorMessage}}</div>
+</div>

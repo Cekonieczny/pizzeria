@@ -1,0 +1,14 @@
+.button{
+  font-size: 14px;
+  padding: 6px;
+}
+.header.column{
+  font-size: 18px;
+}
+.button:hover{
+  color: #000!important;
+  background-color: var(--primaryBackgroundColor)!important;
+}
+#errorMessage{
+  color: lightgray;
+}

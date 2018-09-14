@@ -18,7 +18,11 @@ export class DishService {
   }
 
   getDishById(id: number): Observable<Dish> {
-    return this.http.get<Dish>(`/api/projects/${id}`);
+    return this.http.get<Dish>(`/api/dishes/${id}`);
+  }
+
+  updateAvailability(dish: Dish): Observable<Dish> {
+    return this.http.put<Dish>(`/api/dishes/${dish.id}`, dish);
   }
 
   constructor(private http: HttpClient) {

@@ -1,17 +1,39 @@
-<table>
-  <thead>
-  <th>Name</th>
-  <th>Surname</th>
-  <th>Address</th>
-  <th>Phone Number</th>
-  <th></th>
-  </thead>
-  <tbody>
-  <tr Personal Data>
-    <td> asdasd</td>
-    <td>asdsd</td>
-    <td>ggggg</td>
-    <td><button class="button red card-4">accept</button></td>
-  </tr>
-  </tbody>
-</table>
+<div class="main">
+  <app-shopping-cart></app-shopping-cart>
+  <table class="col2">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th colspan="2">Phone Number</th>
+    </tr>
+    </thead>
+    <tbody [formGroup]=personalDataForm>
+    <tr>
+      <td><input type="text" formControlName="firstName"></td>
+      <td><input type="text" formControlName="lastName"></td>
+      <td><input type="text" formControlName="phoneNumber"></td>
+    </tr>
+    <tr>
+      <th>Street Name</th>
+      <th>City</th>
+      <th colspan="2">Zip Code</th>
+    </tr>
+    <tr Address formGroupName="address">
+      <td Street Name><input type="text" formControlName="street"></td>
+      <td City><input type="text" formControlName="city"></td>
+      <td Zip Code><input type="text" formControlName="zipCode"></td>
+    </tr>
+    <tr>
+      <td><button [ngClass]="!personalDataForm.valid ? 'buttonDisabled' : 'button red card-4'"
+               (click)="submitOrder()" [disabled]="!personalDataForm.valid">Submit
+        Order
+      </button>
+      </td>
+    </tr>
+    <tr *ngIf="!personalDataForm.valid">
+      <td>Every field must be filled</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

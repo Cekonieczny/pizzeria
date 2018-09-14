@@ -1,6 +1,8 @@
+import {Address} from './Address';
+
 export interface PersonalData {
-  name: string;
-  surname: string;
-  address: string;
+  firstName: string;
+  lastName: string;
   phoneNumber: string;
+  address: Address;
 }
