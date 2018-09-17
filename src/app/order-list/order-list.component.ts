@@ -10,7 +10,7 @@ import {Order} from '../models/Order';
 })
 export class OrderListComponent implements OnInit {
   orders = [];
-  @Input() order: Order;
+  order: Order;
 
   constructor(private orderService: OrderService) {
   }

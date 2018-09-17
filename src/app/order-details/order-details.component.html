@@ -42,9 +42,9 @@
       </tr>
       <tbody *ngIf="dishesWithQuantities">
       <tr *ngFor="let dishWithQuantity of dishesWithQuantities">
-        <td>{{dishWithQuantity?.dish.name}}</td>
-        <td>{{dishWithQuantity?.dish.description}}</td>
-        <td>{{dishWithQuantity?.quantity}}</td>
+        <td>{{dishWithQuantity.name}}</td>
+        <td>{{dishWithQuantity.description}}</td>
+        <td>{{dishWithQuantity.quantity}}</td>
       </tr>
       <tr>
         <button *ngIf="!userService.authenticatedUser" routerLink="" class="button red card-4">Back</button>

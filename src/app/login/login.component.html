@@ -1,4 +1,4 @@
-<div [formGroup]="loginForm">
+<form [formGroup]="loginForm">
   <div class="header column">
     <button tabindex="-1" class="button red card-4" *ngIf="!userService.authenticatedUser" (click)="onSubmit()">Login
     </button>
@@ -17,7 +17,7 @@
     <div *ngIf="userService.authenticatedUser">{{userService.authenticatedUser.name}}</div>
   </div>
   <div class="header column">
-    User name:
+    Username:
   </div>
   <div class="header column" id="errorMessage">{{errorMessage}}</div>
-</div>
+</form>

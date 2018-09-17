@@ -1,0 +1,53 @@
+<table *ngIf="personalData" class="main">
+  <caption>Your Order</caption>
+  <div class="col2">
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+      </tr>
+      <tbody>
+      <tr>
+        <td>{{personalData.firstName}}</td>
+        <td>{{personalData.lastName}}</td>
+        <td>{{personalData.phoneNumber}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <table>
+      <tr>
+        <th>City</th>
+        <th>Street name</th>
+        <th>Zip code</th>
+      </tr>
+      <tbody>
+      <tr>
+        <td>{{personalData.address.city}}</td>
+        <td>{{personalData.address.street}}</td>
+        <td>{{personalData.address.zipCode}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col3">
+    <table>
+      <tr>
+        <th>Dish Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+      </tr>
+      <tbody *ngIf="dishesToOrder">
+      <tr *ngFor="let dishToOrder of dishesToOrder">
+        <td>{{dishToOrder.name}}</td>
+        <td>{{dishToOrder.description}}</td>
+        <td>{{dishToOrder.quantity}}</td>
+      </tr>
+      <tr>
+        <button routerLink="/" class="button red card-4">Back</button>
+      </tr>
+      </tbody>
+
+    </table>
+  </div>
+</table>

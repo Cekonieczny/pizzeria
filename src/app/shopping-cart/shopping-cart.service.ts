@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {DishToOrder} from '../models/DishToOrder';
+import {DishWithQuantity} from '../models/DishWithQuantity';
 import {DishIdWithQuantity, Order} from '../models/Order';
 import {Observable} from 'rxjs';
 import {Dish} from '../models/Dish';
@@ -11,32 +11,32 @@ import {PersonalData} from '../models/PersonalData';
   providedIn: 'root'
 })
 export class ShoppingCartService {
-  dishesToOrder: DishToOrder[] = [];
+  dishesToOrder: DishWithQuantity[] = [];
 
   addDishToOrder(dish: Dish) {
-    const dishToOrder: DishToOrder = <DishToOrder>dish;
+    const dishToOrder: DishWithQuantity = <DishWithQuantity>dish;
     const index: number = this.dishesToOrder.findIndex(item => item.id === dishToOrder.id);
     if (index === -1) {
-      dishToOrder.numberOfOrders = 1;
+      dishToOrder.quantity = 1;
       this.dishesToOrder.push(dishToOrder);
     } else {
-      this.dishesToOrder[index].numberOfOrders++;
+      this.dishesToOrder[index].quantity++;
     }
   }
 
-  getDishesToOrder(): DishToOrder[] {
+  getDishesToOrder(): DishWithQuantity[] {
     return this.dishesToOrder;
   }
 
   getAmountToPay(): number {
     let amountToPay = 0;
     for (const dishToOrder of this.dishesToOrder) {
-      amountToPay += +dishToOrder.price * dishToOrder.numberOfOrders;
+      amountToPay += +dishToOrder.price * dishToOrder.quantity;
     }
     return amountToPay;
   }
 
-  deleteDishToOrder(dishToOrder: DishToOrder) {
+  deleteDishToOrder(dishToOrder: DishWithQuantity) {
     for (let i = 0; i < this.dishesToOrder.length; i++) {
       if (this.dishesToOrder[i] === dishToOrder) {
         this.dishesToOrder.splice(i, 1);
@@ -45,12 +45,12 @@ export class ShoppingCartService {
     }
   }
 
-  decrementQuantity(dishToOrder: DishToOrder) {
+  decrementQuantity(dishToOrder: DishWithQuantity) {
     const index: number = this.dishesToOrder.findIndex(item => item.id === dishToOrder.id);
-    if (dishToOrder.numberOfOrders === 1) {
+    if (dishToOrder.quantity === 1) {
       this.dishesToOrder.splice(index, 1);
-    } else if (dishToOrder.numberOfOrders > 1) {
-      dishToOrder.numberOfOrders--;
+    } else if (dishToOrder.quantity > 1) {
+      dishToOrder.quantity--;
     } else {
       return;
     }
@@ -70,7 +70,7 @@ export class ShoppingCartService {
       dishIdsWithQuantities: []
     };
     for (const dishToOrder of this.dishesToOrder) {
-      const dishIdWithQuantity: DishIdWithQuantity = {dishId: dishToOrder.id, quantity: dishToOrder.numberOfOrders};
+      const dishIdWithQuantity: DishIdWithQuantity = {dishId: dishToOrder.id, quantity: dishToOrder.quantity};
       order.dishIdsWithQuantities.push(dishIdWithQuantity);
     }
     return order;

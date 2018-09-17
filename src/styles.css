@@ -74,7 +74,7 @@ th {
 .buttonDisabled {
   pointer-events: none;
   background-color: gray;
-  font-size: 24px;
+  font-size: 14px;
   border: none;
   display: inline-block;
   padding: 8px 16px;

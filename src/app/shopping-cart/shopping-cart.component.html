@@ -11,14 +11,14 @@
   <tr *ngFor="let dishToOrder of getDishesToOrder()">
     <td>{{dishToOrder.name}}</td>
     <td>{{dishToOrder.price}} zł</td>
-    <td>{{dishToOrder.numberOfOrders}}</td>
+    <td>{{dishToOrder.quantity}}</td>
     <td>
-      <button *ngIf="router.url !== '/summary' " class="button btn red card-4"
+      <button *ngIf="router.url !== '/order-summary' " class="button btn red card-4"
               (click)="(decrementQuantity(dishToOrder))">-
       </button>
     </td>
     <td>
-      <button *ngIf="router.url !== '/summary' " class="button btn red card-4"
+      <button *ngIf="router.url !== '/order-summary' " class="button btn red card-4"
               (click)="deleteDishFromDishesToOrder(dishToOrder)">x
       </button>
     </td>
@@ -29,6 +29,8 @@
       Amount to pay: {{getAmountToPay()}} zł
     </td>
   </tr>
-  <button *ngIf="router.url !== '/summary'" class="button red card-4" routerLink="/summary">Order</button>
+  <tr>
+    <td class="noBottomBorder"><button *ngIf="router.url !== '/order-summary'" class="button red card-4" routerLink="/order-summary">Order</button></td>
+  </tr>
 </table>
 </div>

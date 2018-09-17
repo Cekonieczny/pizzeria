@@ -6,11 +6,12 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DishesComponent } from './dishes/dishes.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { SummaryComponent } from './summary/summary.component';
+import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 
 
 @NgModule({
@@ -19,12 +20,14 @@ import { LoginComponent } from './login/login.component';
     DishComponent,
     DishesComponent,
     ShoppingCartComponent,
-    SummaryComponent,
+    OrderSummaryComponent,
     OrderListComponent,
     OrderDetailsComponent,
     LoginComponent,
+    OrderConfirmationComponent,
   ],
   imports: [
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,

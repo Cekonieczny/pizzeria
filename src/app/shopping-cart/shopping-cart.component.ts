@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ShoppingCartService} from './shopping-cart.service';
-import {DishToOrder} from '../models/DishToOrder';
+import {DishWithQuantity} from '../models/DishWithQuantity';
 import {Router} from '@angular/router';
 
 @Component({
@@ -12,7 +12,7 @@ export class ShoppingCartComponent implements OnInit {
   constructor(private shoppingCartService: ShoppingCartService,
               public router: Router) {
   }
-  getDishesToOrder(): DishToOrder[] {
+  getDishesToOrder(): DishWithQuantity[] {
     return this.shoppingCartService.getDishesToOrder();
   }
 
@@ -20,11 +20,11 @@ export class ShoppingCartComponent implements OnInit {
     return this.shoppingCartService.getAmountToPay();
   }
 
-  deleteDishFromDishesToOrder(dishToOrder: DishToOrder) {
+  deleteDishFromDishesToOrder(dishToOrder: DishWithQuantity) {
     this.shoppingCartService.deleteDishToOrder(dishToOrder);
   }
 
-  decrementQuantity(dishToOrder: DishToOrder) {
+  decrementQuantity(dishToOrder: DishWithQuantity) {
     this.shoppingCartService.decrementQuantity(dishToOrder);
   }
 

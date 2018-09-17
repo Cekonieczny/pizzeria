@@ -5,8 +5,8 @@ import {OrderService} from '../order-list/order.service';
 import {DishService} from '../dishes/dish.service';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
-import {DishWithQuantity} from '../models/DishWithQuantity';
 import {UserService} from '../user.service';
+import {DishWithQuantity} from '../models/DishWithQuantity';
 
 @Component({
   selector: 'app-order-details',
@@ -38,10 +38,11 @@ export class OrderDetailsComponent implements OnInit, OnDestroy {
 
   getDishes() {
     for (const dishIdWithQuantity of this.order.dishIdsWithQuantities) {
-      const dishWithQuantity: DishWithQuantity = {dish: undefined, quantity: dishIdWithQuantity.quantity};
+      let dishWithQuantity;
       this.dishService.getDishById(dishIdWithQuantity.dishId).pipe(takeUntil(this.destroy$))
         .subscribe(item => {
-          dishWithQuantity.dish = item;
+          dishWithQuantity = item;
+          dishWithQuantity.quantity = dishIdWithQuantity.quantity;
           this.dishesWithQuantities.push(dishWithQuantity);
         });
     }
