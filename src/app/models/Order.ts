@@ -1,7 +1,7 @@
 import {PersonalData} from './PersonalData';
 
 export interface Order {
-  id: number;
+  id?: number;
   dishIdsWithQuantities: DishIdWithQuantity[];
   personalData?: PersonalData;
 }

@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {User} from './models/User';
-import {CanActivate} from '@angular/router';
+import {User} from '../models/User';
+import {CanActivate, Router} from '@angular/router';
 
 
 @Injectable({
@@ -11,7 +11,8 @@ import {CanActivate} from '@angular/router';
 export class UserService implements CanActivate {
   authenticatedUser: User;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private router: Router) {
   }
 
   getUserByName(name: string): Observable<User[]> {
@@ -19,7 +20,12 @@ export class UserService implements CanActivate {
   }
 
   canActivate() {
-    return this.authenticatedUser.name === 'admin';
+    if (this.authenticatedUser && this.authenticatedUser.name === 'admin') {
+      return true;
+    } else {
+      this.router.navigateByUrl('/');
+      return false;
+    }
   }
 
   authenticate(userToAuthenticate: User, password: string): boolean {

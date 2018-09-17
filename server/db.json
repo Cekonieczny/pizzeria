@@ -19,7 +19,7 @@
     {
       "id": 4,
       "name": "Spaghetti Bolognese",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Sos boloński",
       "type": "spaghetti",
       "price": "14",
@@ -111,49 +111,6 @@
         }
       ],
       "personalData": {
-        "firstName": "",
-        "lastName": "",
-        "phoneNumber": "",
-        "address": {
-          "street": "",
-          "city": "",
-          "zipCode": ""
-        }
-      },
-      "id": 2
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
-        {
-          "dishId": 2,
-          "quantity": 1
-        },
-        {
-          "dishId": 4,
-          "quantity": 1
-        },
-        {
-          "dishId": 5,
-          "quantity": 1
-        },
-        {
-          "dishId": 6,
-          "quantity": 1
-        },
-        {
-          "dishId": 7,
-          "quantity": 1
-        },
-        {
-          "dishId": 8,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
         "firstName": "qwewqt",
         "lastName": "tretreter",
         "phoneNumber": "tretert",
@@ -207,147 +164,6 @@
         }
       },
       "id": 4
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 2
-        },
-        {
-          "dishId": 2,
-          "quantity": 2
-        },
-        {
-          "dishId": 4,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "",
-        "lastName": "",
-        "phoneNumber": "",
-        "address": {
-          "street": "",
-          "city": "",
-          "zipCode": ""
-        }
-      },
-      "id": 5
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
-        {
-          "dishId": 2,
-          "quantity": 2
-        }
-      ],
-      "personalData": {
-        "firstName": "asdasd",
-        "lastName": "qweqwet",
-        "phoneNumber": "yyy",
-        "address": {
-          "street": "ertret",
-          "city": "utyutyu",
-          "zipCode": "ytutyuty"
-        }
-      },
-      "id": 6
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "asda",
-        "lastName": "qweqw",
-        "phoneNumber": "qeqwe",
-        "address": {
-          "street": "retert",
-          "city": "qwerwr",
-          "zipCode": "qweqew"
-        }
-      },
-      "id": 7
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
-        {
-          "dishId": 2,
-          "quantity": 1
-        },
-        {
-          "dishId": 4,
-          "quantity": 1
-        },
-        {
-          "dishId": 5,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "ddasd",
-        "lastName": "asdasdsa",
-        "phoneNumber": "asdsad",
-        "address": {
-          "street": "qwdwq",
-          "city": "asdsad",
-          "zipCode": "asdasda"
-        }
-      },
-      "id": 8
-    },
-    {
-      "dishIdsWithQuantities": [],
-      "personalData": {
-        "firstName": "fdfdfd",
-        "lastName": "fdfdfd",
-        "phoneNumber": "fdfdfd",
-        "address": {
-          "street": "fdfd",
-          "city": "fdfd",
-          "zipCode": "fdfdfd"
-        }
-      },
-      "id": 9
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 4,
-          "quantity": 2
-        },
-        {
-          "dishId": 5,
-          "quantity": 2
-        },
-        {
-          "dishId": 8,
-          "quantity": 3
-        }
-      ],
-      "personalData": {
-        "firstName": "dfgg",
-        "lastName": "dfgerter",
-        "phoneNumber": "ertter",
-        "address": {
-          "street": "dfgdfgdfg",
-          "city": "dfgdfgdfg",
-          "zipCode": "dfdg"
-        }
-      },
-      "id": 10
     },
     {
       "dishIdsWithQuantities": [
@@ -414,20 +230,6 @@
         }
       },
       "id": 12
-    },
-    {
-      "dishIdsWithQuantities": [],
-      "personalData": {
-        "firstName": "wqewqe",
-        "lastName": "ewqeqwe",
-        "phoneNumber": "wqeqweqw",
-        "address": {
-          "street": "wqeqwe",
-          "city": "qwewqewqe",
-          "zipCode": "eqweqwe"
-        }
-      },
-      "id": 13
     },
     {
       "dishIdsWithQuantities": [
@@ -535,25 +337,6 @@
         {
           "dishId": 5,
           "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "qweqweqweqwe",
-        "lastName": "qweqwe",
-        "phoneNumber": "qweqweqe",
-        "address": {
-          "street": "wqeqwe",
-          "city": "wqeqwewq",
-          "zipCode": "eqweqweqwe"
-        }
-      },
-      "id": 17
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 5,
-          "quantity": 1
         },
         {
           "dishId": 7,
@@ -575,90 +358,6 @@
         }
       },
       "id": 18
-    },
-    {
-      "dishIdsWithQuantities": [],
-      "personalData": {
-        "firstName": "asdasdsa",
-        "lastName": "dsadsadsa",
-        "phoneNumber": "dsadsadsa",
-        "address": {
-          "street": "adsadsad",
-          "city": "sadsadasd",
-          "zipCode": "dsadsad"
-        }
-      },
-      "id": 19
-    },
-    {
-      "dishIdsWithQuantities": [],
-      "personalData": {
-        "firstName": "asdasdsa",
-        "lastName": "dsadsadsa",
-        "phoneNumber": "dsadsadsa",
-        "address": {
-          "street": "adsadsad",
-          "city": "sadsadasd",
-          "zipCode": "dsadsad"
-        }
-      },
-      "id": 20
-    },
-    {
-      "dishIdsWithQuantities": [],
-      "personalData": {
-        "firstName": "asdasdsa",
-        "lastName": "dsadsadsa",
-        "phoneNumber": "dsadsadsa",
-        "address": {
-          "street": "adsadsad",
-          "city": "sadsadasd",
-          "zipCode": "dsadsad"
-        }
-      },
-      "id": 21
-    },
-    {
-      "dishIdsWithQuantities": [],
-      "personalData": {
-        "firstName": "asdasdsa",
-        "lastName": "dsadsadsa",
-        "phoneNumber": "dsadsadsa",
-        "address": {
-          "street": "adsadsad",
-          "city": "sadsadasd",
-          "zipCode": "dsadsad"
-        }
-      },
-      "id": 22
-    },
-    {
-      "dishIdsWithQuantities": [],
-      "personalData": {
-        "firstName": "asdasdsa",
-        "lastName": "dsadsadsa",
-        "phoneNumber": "dsadsadsa",
-        "address": {
-          "street": "adsadsad",
-          "city": "sadsadasd",
-          "zipCode": "dsadsad"
-        }
-      },
-      "id": 23
-    },
-    {
-      "dishIdsWithQuantities": [],
-      "personalData": {
-        "firstName": "asdasdsa",
-        "lastName": "dsadsadsa",
-        "phoneNumber": "dsadsadsa",
-        "address": {
-          "street": "adsadsad",
-          "city": "sadsadasd",
-          "zipCode": "dsadsad"
-        }
-      },
-      "id": 24
     },
     {
       "dishIdsWithQuantities": [
@@ -1029,10 +728,6 @@
           "quantity": 1
         },
         {
-          "dishId": 4,
-          "quantity": 1
-        },
-        {
           "dishId": 5,
           "quantity": 1
         },
@@ -1046,267 +741,16 @@
         }
       ],
       "personalData": {
-        "firstName": "wqewqe",
-        "lastName": "wqewqewq",
-        "phoneNumber": "ewqewqewq",
+        "firstName": "asdsa",
+        "lastName": "dasdsad",
+        "phoneNumber": "sadasdsa",
         "address": {
-          "street": "wqewqe",
-          "city": "qwewqeqwe",
-          "zipCode": "ewqeqwe"
+          "street": "asdsa",
+          "city": "asasd",
+          "zipCode": "dsadsad"
         }
       },
       "id": 35
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
-        {
-          "dishId": 2,
-          "quantity": 1
-        },
-        {
-          "dishId": 4,
-          "quantity": 1
-        },
-        {
-          "dishId": 5,
-          "quantity": 1
-        },
-        {
-          "dishId": 6,
-          "quantity": 1
-        },
-        {
-          "dishId": 7,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "dghd",
-        "lastName": "hgdhdhgg",
-        "phoneNumber": "hgdghhgd",
-        "address": {
-          "street": "dgh",
-          "city": "dhghdgd",
-          "zipCode": "hgdh"
-        }
-      },
-      "id": 36
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
-        {
-          "dishId": 2,
-          "quantity": 1
-        },
-        {
-          "dishId": 4,
-          "quantity": 1
-        },
-        {
-          "dishId": 5,
-          "quantity": 1
-        },
-        {
-          "dishId": 6,
-          "quantity": 1
-        },
-        {
-          "dishId": 7,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "yjyyjj",
-        "lastName": "yujyujyu",
-        "phoneNumber": "jyujyuj",
-        "address": {
-          "street": "jyujyu",
-          "city": "yujyujyu",
-          "zipCode": "yujyuj"
-        }
-      },
-      "id": 37
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "qwe",
-        "lastName": "e",
-        "phoneNumber": "e",
-        "address": {
-          "street": "e",
-          "city": "e",
-          "zipCode": "e"
-        }
-      },
-      "id": 38
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 2,
-          "quantity": 1
-        },
-        {
-          "dishId": 4,
-          "quantity": 1
-        },
-        {
-          "dishId": 5,
-          "quantity": 1
-        },
-        {
-          "dishId": 6,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "q",
-        "lastName": "qqq",
-        "phoneNumber": "qqq",
-        "address": {
-          "street": "qq",
-          "city": "qq",
-          "zipCode": "qqqq"
-        }
-      },
-      "id": 39
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        },
-        {
-          "dishId": 2,
-          "quantity": 1
-        },
-        {
-          "dishId": 4,
-          "quantity": 1
-        },
-        {
-          "dishId": 5,
-          "quantity": 1
-        },
-        {
-          "dishId": 6,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "qwe",
-        "lastName": "ewqe",
-        "phoneNumber": "qwewqew",
-        "address": {
-          "street": "ewqe",
-          "city": "qweqwe",
-          "zipCode": "ee"
-        }
-      },
-      "id": 40
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "gfdgf",
-        "lastName": "dfgdgdf",
-        "phoneNumber": "fdgdfgd",
-        "address": {
-          "street": "dfgdfgdgfdgdgdfgdfgdfgdfg",
-          "city": "fgdfgd",
-          "zipCode": "gfdgfdg"
-        }
-      },
-      "id": 41
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 1,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "fff",
-        "lastName": "fff",
-        "phoneNumber": "ffff",
-        "address": {
-          "street": "fff",
-          "city": "ff",
-          "zipCode": "fff"
-        }
-      },
-      "id": 42
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 2,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "sdfdsfds",
-        "lastName": "fdsfds",
-        "phoneNumber": "fdsfdsf",
-        "address": {
-          "street": "sdfdsf",
-          "city": "dsfdsf",
-          "zipCode": "sdfdsf"
-        }
-      },
-      "id": 43
-    },
-    {
-      "dishIdsWithQuantities": [
-        {
-          "dishId": 2,
-          "quantity": 2
-        },
-        {
-          "dishId": 4,
-          "quantity": 1
-        },
-        {
-          "dishId": 5,
-          "quantity": 7
-        },
-        {
-          "dishId": 6,
-          "quantity": 1
-        }
-      ],
-      "personalData": {
-        "firstName": "dgfd",
-        "lastName": "fdfgdfgdg",
-        "phoneNumber": "dgfgdf",
-        "address": {
-          "street": "fgfdgdgd",
-          "city": "gfdgfdg",
-          "zipCode": "gdfgd"
-        }
-      },
-      "id": 44
     }
   ],
   "users": [

@@ -11,7 +11,10 @@ import {PersonalData} from '../models/PersonalData';
   providedIn: 'root'
 })
 export class ShoppingCartService {
-  dishesToOrder: DishWithQuantity[] = [];
+  private dishesToOrder: DishWithQuantity[] = [];
+
+  constructor(private http: HttpClient) {
+  }
 
   addDishToOrder(dish: Dish) {
     const dishToOrder: DishWithQuantity = <DishWithQuantity>dish;
@@ -66,7 +69,6 @@ export class ShoppingCartService {
 
   private convertToOrder(): Order {
     const order: Order = {
-      id: undefined,
       dishIdsWithQuantities: []
     };
     for (const dishToOrder of this.dishesToOrder) {
@@ -76,6 +78,5 @@ export class ShoppingCartService {
     return order;
   }
 
-  constructor(private http: HttpClient) {
-  }
+
 }

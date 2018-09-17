@@ -37,11 +37,11 @@
         <th>Description</th>
         <th>Quantity</th>
       </tr>
-      <tbody *ngIf="dishesToOrder">
-      <tr *ngFor="let dishToOrder of dishesToOrder">
-        <td>{{dishToOrder.name}}</td>
-        <td>{{dishToOrder.description}}</td>
-        <td>{{dishToOrder.quantity}}</td>
+      <tbody *ngIf="dishesWithQuantities">
+      <tr *ngFor="let dishWithQuantity of dishesWithQuantities">
+        <td>{{dishWithQuantity.name}}</td>
+        <td>{{dishWithQuantity.description}}</td>
+        <td>{{dishWithQuantity.quantity}}</td>
       </tr>
       <tr>
         <button routerLink="/" class="button red card-4">Back</button>

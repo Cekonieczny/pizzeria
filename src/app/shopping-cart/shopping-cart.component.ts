@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ShoppingCartService} from './shopping-cart.service';
 import {DishWithQuantity} from '../models/DishWithQuantity';
 import {Router} from '@angular/router';
+import {Subject} from 'rxjs';
 
 @Component({
   selector: 'app-shopping-cart',

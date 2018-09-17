@@ -13,7 +13,12 @@ export class OrderService {
   getOrders(): Observable<Order[]> {
     return this.http.get<Order[]>('api/orders');
   }
+
   getOrderById(id: number): Observable<Order> {
     return this.http.get<Order>(`api/orders/${id}`);
+  }
+
+  deleteOrder(id: number): Observable<Order> {
+    return this.http.delete<Order>(`api/orders/${id}`);
   }
 }

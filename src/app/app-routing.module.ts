@@ -4,7 +4,7 @@ import {DishesComponent} from './dishes/dishes.component';
 import {OrderSummaryComponent} from './order-summary/order-summary.component';
 import {OrderListComponent} from './order-list/order-list.component';
 import {OrderDetailsComponent} from './order-details/order-details.component';
-import {UserService} from './user.service';
+import {UserService} from './login/user.service';
 import {OrderConfirmationComponent} from './order-confirmation/order-confirmation.component';
 
 const routes: Routes = [

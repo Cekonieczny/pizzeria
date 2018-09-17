@@ -1,11 +1,11 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Order} from '../models/Order';
 import {OrderService} from '../order-list/order.service';
 import {DishService} from '../dishes/dish.service';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
-import {UserService} from '../user.service';
+import {UserService} from '../login/user.service';
 import {DishWithQuantity} from '../models/DishWithQuantity';
 
 @Component({
@@ -21,7 +21,8 @@ export class OrderDetailsComponent implements OnInit, OnDestroy {
   constructor(private orderService: OrderService,
               private activatedRoute: ActivatedRoute,
               private dishService: DishService,
-              public userService: UserService) {
+              public userService: UserService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -46,6 +47,12 @@ export class OrderDetailsComponent implements OnInit, OnDestroy {
           this.dishesWithQuantities.push(dishWithQuantity);
         });
     }
+  }
+
+  onDelete() {
+    this.orderService.deleteOrder(this.order.id).pipe(takeUntil(this.destroy$)).subscribe(item => {
+      this.router.navigateByUrl('/order-list');
+    });
   }
 
   ngOnDestroy(): void {

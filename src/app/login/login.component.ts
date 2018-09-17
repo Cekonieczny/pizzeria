@@ -1,15 +1,18 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
-import {UserService} from '../user.service';
+import {UserService} from './user.service';
 import {Router} from '@angular/router';
+import {takeUntil} from 'rxjs/operators';
+import {Subject} from 'rxjs';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   private readonly WRONG_CREDENTIALS: string = 'Invalid user name or password';
+  private readonly destroy$ = new Subject();
   errorMessage: string;
 
 
@@ -30,7 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.userService.getUserByName(this.loginForm.controls['name'].value).subscribe(items => {
+    this.userService.getUserByName(this.loginForm.controls['name'].value).pipe(takeUntil(this.destroy$)).subscribe(items => {
       this.errorMessage = undefined;
       if (items.length === 0) {
         this.errorMessage = this.WRONG_CREDENTIALS;
@@ -47,6 +50,11 @@ export class LoginComponent implements OnInit {
   logout() {
     this.userService.resetAuthenticatedUser();
     this.loginForm.reset();
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
 }

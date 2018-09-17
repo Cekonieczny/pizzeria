@@ -1,7 +1,7 @@
 import {DishType} from './DishType';
 
 export interface Dish {
-  id: number;
+  id?: number;
   name: string;
   isAvailable: boolean;
   description: string;

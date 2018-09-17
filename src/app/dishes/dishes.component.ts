@@ -1,18 +1,19 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DishService} from './dish.service';
 import {Dish} from '../models/Dish';
 import {ActivatedRoute} from '@angular/router';
 import {DishType} from '../models/DishType';
 import {ShoppingCartService} from '../shopping-cart/shopping-cart.service';
-import {UserService} from '../user.service';
+import {UserService} from '../login/user.service';
+import {Subject} from 'rxjs';
 
 @Component({
   selector: 'app-dishes',
   templateUrl: './dishes.component.html',
   styleUrls: ['./dishes.component.css']
 })
-export class DishesComponent implements OnInit {
-
+export class DishesComponent implements OnInit, OnDestroy {
+  private readonly destroy$ = new Subject();
   dishes: Dish[];
 
   constructor(private dishService: DishService,
@@ -32,18 +33,23 @@ export class DishesComponent implements OnInit {
     });
   }
 
-  getDishes(): void {
+  updateAvailability(dish: Dish) {
+    dish.isAvailable = !dish.isAvailable;
+    this.dishService.updateAvailability(dish).subscribe();
+  }
+
+  private getDishes(): void {
     this.dishService.getDishes()
       .subscribe(dishes => this.dishes = dishes);
   }
 
-  getDishesByType(dishType: DishType): void {
+  private getDishesByType(dishType: DishType): void {
     this.dishService.getDishesByType(dishType)
       .subscribe(dishes => this.dishes = dishes);
   }
 
-  updateAvailability(dish: Dish) {
-    dish.isAvailable = !dish.isAvailable;
-    this.dishService.updateAvailability(dish).subscribe();
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

@@ -11,22 +11,22 @@ import {OrderConfirmationService} from './order-confirmation.service';
 export class OrderConfirmationComponent implements OnInit {
 
   personalData: PersonalData;
-  dishesToOrder: DishWithQuantity[] = [];
+  dishesWithQuantities: DishWithQuantity[] = [];
 
   constructor(private orderConfirmationService: OrderConfirmationService) {
   }
 
   ngOnInit() {
     this.setPersonalData();
-    this.setDishesToOrder();
+    this.setDishesWithQuantities();
   }
 
   setPersonalData() {
     this.personalData = this.orderConfirmationService.getPersonalData();
   }
 
-  setDishesToOrder() {
-    this.dishesToOrder = this.orderConfirmationService.getdishesToOrder();
+  setDishesWithQuantities() {
+    this.dishesWithQuantities = this.orderConfirmationService.getDishesToOrder();
   }
 
 }

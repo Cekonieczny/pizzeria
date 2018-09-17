@@ -7,22 +7,22 @@ import {DishWithQuantity} from '../models/DishWithQuantity';
 })
 export class OrderConfirmationService {
   private personalData: PersonalData;
-  private dishesToOrder: DishWithQuantity[] = [];
+  private dishesWithQuantities: DishWithQuantity[] = [];
 
   setPersonalData(personalData: PersonalData) {
     this.personalData = personalData;
   }
 
-  setDishesToOrder(dishesToOrder: DishWithQuantity[]) {
-    this.dishesToOrder = dishesToOrder;
+  setDishesToOrder(dishesWithQuantities: DishWithQuantity[]) {
+    this.dishesWithQuantities = dishesWithQuantities;
   }
 
   getPersonalData() {
     return this.personalData;
   }
 
-  getdishesToOrder() {
-    return this.dishesToOrder;
+  getDishesToOrder() {
+    return this.dishesWithQuantities;
   }
 
   constructor() {

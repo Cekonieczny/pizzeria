@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { DishComponent } from './dish/dish.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DishesComponent } from './dishes/dishes.component';
 import {HttpClientModule} from '@angular/common/http';
@@ -17,7 +16,6 @@ import { OrderConfirmationComponent } from './order-confirmation/order-confirmat
 @NgModule({
   declarations: [
     AppComponent,
-    DishComponent,
     DishesComponent,
     ShoppingCartComponent,
     OrderSummaryComponent,

@@ -3,8 +3,8 @@
     <th>Order number</th>
     </thead>
     <tbody>
-    <tr *ngFor="let order of orders">
-      <td class="button fixedWidth red card-4" [routerLink]="['/order-details', order.id]" routerLinkActive="selected">{{order.id}}</td>
+    <tr *ngFor="let order of orders; let i = index">
+      <td class="button fixedWidth red card-4" [routerLink]="['/order-details', order.id]" routerLinkActive="selected">{{i+1}}</td>
     </tr>
     </tbody>
 </table>

@@ -1,8 +1,10 @@
-import { Component, OnInit, } from '@angular/core';
+import {Component, OnDestroy, OnInit, } from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import {ShoppingCartService} from '../shopping-cart/shopping-cart.service';
 import {Router} from '@angular/router';
 import {OrderConfirmationService} from '../order-confirmation/order-confirmation.service';
+import {Subject} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
 
 @Component({
   selector: 'app-summary',
@@ -12,6 +14,7 @@ import {OrderConfirmationService} from '../order-confirmation/order-confirmation
 
 
 export class OrderSummaryComponent implements OnInit {
+
   constructor(private formBuilder: FormBuilder,
               private shoppingCartService: ShoppingCartService,
               private router: Router,
@@ -31,19 +34,15 @@ export class OrderSummaryComponent implements OnInit {
   });
 
   public submitOrder() {
-    /*this.shoppingCartService.submitOrder(this.personalDataForm.value).subscribe(order => {
-      this.router.navigateByUrl(`order-details/${order.id}`);
-    });*/
     this.setOrderConfirmation();
     this.shoppingCartService.submitOrder(this.personalDataForm.value).subscribe();
   }
 
   private setOrderConfirmation() {
-    this.orderConfirmationService.setDishesToOrder(this.shoppingCartService.dishesToOrder);
+    this.orderConfirmationService.setDishesToOrder(this.shoppingCartService.getDishesToOrder());
     this.orderConfirmationService.setPersonalData(this.personalDataForm.value);
   }
 
   ngOnInit() {
   }
-
 }
